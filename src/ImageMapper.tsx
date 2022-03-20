@@ -280,6 +280,7 @@ const ImageMapper: React.FC<ImageMapperProps> = (props: ImageMapperProps) => {
           onClick={event => click(extendedArea, index, event)}
           href={area.href}
           alt="map"
+          data-tip={area.title}
         />
       );
     });
