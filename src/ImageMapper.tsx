@@ -55,6 +55,10 @@ const ImageMapper: React.FC<ImageMapperProps> = (props: ImageMapperProps) => {
   const isInitialMount = useRef<boolean>(true);
 
   useEffect(() => {
+    ReactTooltip.rebuild();
+  });
+
+  useEffect(() => {
     initCanvas(true);
     ctx.current = canvas.current.getContext('2d');
     updateCacheMap();
